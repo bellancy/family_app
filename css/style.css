@@ -13,15 +13,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    max-height: 100vh;
 }
 
 .obsah {
+    
     width: 412px;
     height: 917px;
-
     overflow-y: auto;
-
     background: #1E1E1E;
     position: relative;
     overflow-x: hidden;
@@ -30,20 +29,28 @@ body {
     padding-top: 30px;
     padding-bottom: 30px;
 }
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
 
 .navbar-toggler-icon {
-    width: 36px;
-    height: 36px;
+    width: 42px;
+    height: 42px;
 }
-
+button {
+    all: unset;
+    display: inline-block;
+  }
 .offcanvas {
     position: absolute !important;
     top: 0;
     left: 0;
     z-index: 1101 !important;
-    width: 190px !important;
-    background-color: #1E1E1E !important;
+    width: 220px !important;
+    background-color: #171717 !important;
     color: white !important;
+    
 }
 
 .offcanvas.show {
@@ -71,7 +78,9 @@ body {
     box-shadow: none !important;
 }
 
-
+.offcanvas-backdrop {
+    display: none !important;
+  }
 .content {
     padding: 20px;
 }
@@ -92,3 +101,33 @@ body {
 .nav-item a {
     font-size: 20px;
 }
+
+.offcanvas-body {
+    padding-inline: 2rem !important;
+}
+  
+
+/*zacatek po menu*/
+.navbar {
+    width: auto !important;
+    display: inline-block !important;
+    padding: 0 !important;
+  }
+
+ .pic, .add, .name {
+    position: absolute;
+   left:50%;
+   transform: translateX(-50%);
+ }
+ .add {
+    margin-top: 5.5rem;
+    left: 65%;
+ }
+ .name {
+    margin-top: 7rem;
+ }
+ .name p {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+ }
