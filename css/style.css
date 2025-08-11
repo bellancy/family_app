@@ -53,8 +53,14 @@ html,
 .offcanvas-header .btn-close {
     filter: invert(1);
 }
-
 #offcanvasNavbar {
-    left: 420px !important; /* posun o šířku navbaru */
-    --bs-offcanvas-width: 180px;
+  width: 420px !important;
+  left: 50% !important;
+  top: 0;
+  bottom: 0;
+  transform: translateX(-50%) !important;
+  background-color: #1E1E1E !important;
+  padding: 0;
+  overflow-y: auto;
+  position: fixed !important;
 }
