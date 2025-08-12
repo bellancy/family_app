@@ -94,26 +94,212 @@
         <div class="screens">
 
             <div class="choose d-flex">
-                <div class="tab todo active col-6 text-center" onclick="showTab('todo')"><p>TO DO</p></div>
-                <div class="tab done col-6 text-center" onclick="showTab('done')"><p>DONE</p></div>
+                <div class="tab todo active col-6 text-center" onclick="showTab('todo')">
+                    <p>TO DO</p>
+                </div>
+                <div class="tab done col-6 text-center" onclick="showTab('done')">
+                    <p>DONE</p>
+                </div>
             </div>
 
 
             <div class="slider-container">
                 <div class="slider" id="slider">
+
                     <div id="todoContent" class="content">
-                        <h2>TASKS</h2>
-                        
+                        <h2>YOUR TASKS</h2>
+                        <div class="tasks">
+                            <div class="me" >
+                                <div id="todoTasks">
+                                   
+                                </div>
+                                <div class="box d-flex gap-4 mt-2">
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                        </svg>
+                                    </button>
+                                    <div class="text flex-column">
+                                        <h3>Do the dishes</h3>
+                                        <p class="dot">from Mom</p>
+                                    </div>
+                                </div>
+
+                                <div class="box d-flex gap-4 mt-2">
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                        </svg>
+                                    </button>
+                                    <div class="text flex-column">
+                                        <h3>CLEAN UP YOUr room</h3>
+                                        <p class="dot">from Dad</p>
+                                    </div>
+                                </div>
+
+                                <div class="box d-flex gap-4 mt-2">
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                        </svg>
+                                    </button>
+                                    <div class="text flex-column">
+                                        <h3>FEED MR. WHISKER</h3>
+                                        <p class="dot">from Vanessa</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2 class="pt-5">GROUP TASKS</h2>
+                        <div class="tasks">
+                            <div class="me" >
+                                
+
+                                <div class="box d-flex gap-4 mt-2">
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                        </svg>
+                                    </button>
+                                    <div class="text flex-column">
+                                        <h3>PICK UP THE PACKAGE</h3>
+                                        <p class="dot">from Mom</p>
+                                    </div>
+                                </div>
+
+                               
+
+                                <div class="box d-flex gap-4 mt-2">
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                        </svg>
+                                    </button>
+                                    <div class="text flex-column">
+                                        <h3>TAKE OUT THE TRASH</h3>
+                                        <p class="dot">from Dad</p>
+                                    </div>
+                                </div>
+
+                                <div class="box d-flex gap-4 mt-2">
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                        </svg>
+                                    </button>
+                                    <div class="text flex-column">
+                                        <h3>clean the bathroom</h3>
+                                        <p class="dot">from Mom</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+
+
+
                     <div id="doneContent" class="content">
-                        
-                        
+                        <div id="doneTasks">
+                          
+                        </div>
+                        <div class="box d-flex gap-4 mt-2 completed">
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                </svg>
+                            </button>
+                            <div class="text flex-column">
+                                <h3>MAKE DINNER</h3>
+                                <p class="dot">from Dad</p>
+                            </div>
+                        </div>
+
+                        <div class="box d-flex gap-4 mt-2 completed">
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                </svg>
+                            </button>
+                            <div class="text flex-column">
+                                <h3>showel snow</h3>
+                                <p class="dot">from Dad</p>
+                            </div>
+                        </div>
+
+                        <div class="box d-flex gap-4 mt-2 completed">
+                            <button >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                </svg>
+                            </button>
+                            <div class="text flex-column">
+                                <h3>FOLD YOUR CLOTHES</h3>
+                                <p class="dot">from Mom</p>
+                            </div>
+                        </div>
+                        <div class="box d-flex gap-4 mt-2 completed">
+                            <button >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                </svg>
+                            </button>
+                            <div class="text flex-column">
+                                <h3>TAKE OUT THE TRASH</h3>
+                                <p class="dot">from Dad</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
 
         <script>
+        
+
+            document.querySelectorAll('.box button').forEach(button => {
+                button.addEventListener('click', () => {
+                    const box = button.closest('.box');
+                    const todoContainer = document.getElementById('todoTasks');
+                    const doneContainer = document.getElementById('doneTasks');
+
+                    // přepni stav dokončení
+                    const isCompleted = box.classList.toggle('completed');
+
+                    if (isCompleted) {
+                        // pokud je úkol hotový, přesun ho do done (na začátek)
+                        doneContainer.prepend(box);
+                    } else {
+                        // pokud úkol vracíme do todo, přesun na konec todo
+                        todoContainer.appendChild(box);
+                    }
+                });
+            });
+
+
+
             let activeTab = 'todo';
 
             function showTab(tab) {

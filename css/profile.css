@@ -15,7 +15,10 @@ body {
     align-items: center;
     max-height: 100vh;
 }
-
+button {
+    all: unset;
+    display: inline-block;
+}
 .obsah {
     
     width: 412px;

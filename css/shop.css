@@ -105,7 +105,40 @@ h1, h2, h3, h4, h5, h6, p {
    .navbar-nav .nav-item .nav-link svg {
   margin-bottom: 0 !important;
 }
-
+button {
+    all: unset;
+    display: inline-block;
+}
 /*zacatek po menu*/
 
 
+.add{
+    position: absolute;
+    right: 5rem;
+    background-color: none;
+}
+
+h2 {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    color: #D689FF !important;
+    padding-bottom: 1rem;
+}
+
+h3 {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    letter-spacing: 1px !important;
+    color: white !important;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 24px!important;
+    color: #D689FF !important;
+    text-align: center;
+}
+.category h3 {
+    text-transform: none;
+}

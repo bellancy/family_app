@@ -65,7 +65,10 @@ button {
 .offcanvas.show {
     transform: translateX(0) !important;
 }
-
+button, input {
+    all: unset;
+    display: inline-block;
+}
 .navbar {
     background: #343a40;
     padding: 10px;

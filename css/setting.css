@@ -98,7 +98,10 @@ h1, h2, h3, h4, h5, h6, p {
 .nav-item a {
     font-size: 20px;
 }
-
+button {
+    all: unset;
+    display: inline-block;
+}
 .offcanvas-body {
     padding-inline: 2rem !important;
 }
