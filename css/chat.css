@@ -17,7 +17,7 @@ body {
 }
 
 .obsah {
-    
+
     width: 412px;
     height: 917px;
     overflow-y: auto;
@@ -29,14 +29,26 @@ body {
     padding-top: 30px;
     padding-bottom: 30px;
 }
-h1, h2, h3, h4, h5, h6, p {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
-  }
+}
 
 .navbar-toggler-icon {
-    width: 36px;
-    height: 36px;
+    width: 42px;
+    height: 42px;
+}
+
+button {
+    all: unset;
+    display: inline-block;
 }
 
 .offcanvas {
@@ -47,7 +59,7 @@ h1, h2, h3, h4, h5, h6, p {
     width: 220px !important;
     background-color: #171717 !important;
     color: white !important;
-    
+
 }
 
 .offcanvas.show {
@@ -77,7 +89,8 @@ h1, h2, h3, h4, h5, h6, p {
 
 .offcanvas-backdrop {
     display: none !important;
-  }
+}
+
 .content {
     padding: 20px;
 }
@@ -92,7 +105,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .offcanvas a.nav-link.active {
-    color: #FB8500 !important;
+    color: #D689FF !important;
 }
 
 .nav-item a {
@@ -102,7 +115,11 @@ h1, h2, h3, h4, h5, h6, p {
 .offcanvas-body {
     padding-inline: 2rem !important;
 }
-  
+
+.navbar-nav .nav-item .nav-link svg {
+    margin-bottom: 0 !important;
+}
+
 
 /*zacatek po menu*/
 .group-name {
@@ -212,7 +229,7 @@ button {
 }
 
 .offcanvas a.nav-link.active {
-    color: #FB8500 !important;
+    color: #D689FF !important;
 }
 
 .nav-item a {

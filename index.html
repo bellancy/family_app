@@ -90,7 +90,54 @@
                 </div>
             </div>
         </div>
+
+        <div class="screens">
+
+            <div class="choose d-flex">
+                <div class="tab todo active col-6 text-center" onclick="showTab('todo')"><p>TO DO</p></div>
+                <div class="tab done col-6 text-center" onclick="showTab('done')"><p>DONE</p></div>
+            </div>
+
+
+            <div class="slider-container">
+                <div class="slider" id="slider">
+                    <div id="todoContent" class="content">
+                        <h2>TASKS</h2>
+                        
+                    </div>
+                    <div id="doneContent" class="content">
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            let activeTab = 'todo';
+
+            function showTab(tab) {
+                if (tab === activeTab) return;
+
+                const slider = document.getElementById('slider');
+                const tabs = document.querySelectorAll('.tab');
+
+                // Posuneme slider podle zvolené záložky
+                if (tab === 'todo') {
+                    slider.style.transform = 'translateX(0)';
+                } else if (tab === 'done') {
+                    slider.style.transform = 'translateX(-100%)';
+                }
+
+                // Přepneme aktivní třídu u záložek
+                tabs.forEach(t => t.classList.remove('active'));
+                document.querySelector('.tab.' + tab).classList.add('active');
+
+                activeTab = tab;
+            }
+        </script>
     </div>
+
     <script>
         const obsah = document.querySelector('.obsah');
 
