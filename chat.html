@@ -13,7 +13,7 @@
 <body>
     <div class="scale">
         <div class="obsah">
-            <nav class="navbar">
+            <nav class="navbar d-flex pb-2">
                 <div class="group-left d-flex">
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
@@ -99,53 +99,71 @@
 
 
             <div class="chat-container">
-        <header class="chat-header">
-            <div class="contact-info">
-                <img src="avatar.png" alt="User Avatar" class="avatar">
-                <span class="contact-name">User Name</span>
+
+                <main class="chat-messages">
+                    <div class="message received">
+                        <p>Don’t forget — Grandma’s is birthday is Sunday at 3!</p>
+                        <span class="timestamp">10:00 AM</span>
+                    </div>
+                    <div class="message received">
+                        <p>At her house or the park?</p>
+                        <span class="timestamp">10:00 AM</span>
+                    </div>
+                    <div class="message received">
+                        <p>Park, weather permitting.</p>
+                        <span class="timestamp">10:00 AM</span>
+                    </div>
+                    
+                    <div class="message sent">
+                        <p>What if it rains?</p>
+                        <span class="timestamp">10:01 AM</span>
+                    </div>
+
+                    <div class="message received">
+                        <p>Then her living room.</p>
+                        <span class="timestamp">10:00 AM</span>
+                    </div>
+                    <div class="message received">
+                        <p>I’ll bring the balloons.</p>
+                        <span class="timestamp">10:00 AM</span>
+                    </div>
+                    <div class="message received">
+                        <p>No black balloons this year, please.</p>
+                        <span class="timestamp">10:00 AM</span>
+                    </div>
+                    <div class="message received">
+                        <p class="big">👍</p>
+                        <span class="timestamp">10:00 AM</span>
+                    </div>
+                </main>
+
+                <footer class="chat-footer">
+                    <input type="text" class="message-input" placeholder="message...">
+                    <button class="send-button">Send</button>
+                </footer>
+
+
+
             </div>
-            <div class="chat-options">
-                </div>
-        </header>
-
-        <main class="chat-messages">
-            <div class="message received">
-                <p>Hello! How are you?</p>
-                <span class="timestamp">10:00 AM</span>
-            </div>
-            <div class="message sent">
-                <p>I'm doing great, thanks!</p>
-                <span class="timestamp">10:01 AM</span>
-            </div>
-        </main>
-
-        <footer class="chat-footer">
-            <input type="text" class="message-input" placeholder="Type a message...">
-            <button class="send-button">Send</button>
-        </footer>
-  
-
-
         </div>
-    </div>
 
-    <script>
-        const obsah = document.querySelector('.obsah');
+        <script>
+            const obsah = document.querySelector('.obsah');
 
-        function scale() {
-            const scaleX = window.innerWidth / 412;
-            const scaleY = window.innerHeight / 917;
-            const scale = Math.min(scaleX, scaleY, 1);
-            obsah.style.transform = `scale(${scale})`;
-        }
+            function scale() {
+                const scaleX = window.innerWidth / 412;
+                const scaleY = window.innerHeight / 917;
+                const scale = Math.min(scaleX, scaleY, 1);
+                obsah.style.transform = `scale(${scale})`;
+            }
 
-        window.addEventListener('resize', scale);
-        scale();
+            window.addEventListener('resize', scale);
+            scale();
 
-        
-    </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
