@@ -102,6 +102,8 @@ h1, h2, h3, h4, h5, h6, p {
 .offcanvas-body {
     padding-inline: 2rem !important;
 }
-  
+   .navbar-nav .nav-item .nav-link svg {
+  margin-bottom: 0 !important;
+}
 
 /*zacatek po menu*/

@@ -106,6 +106,9 @@ button {
     padding-inline: 2rem !important;
 }
   
+ .navbar-nav .nav-item .nav-link svg {
+  margin-bottom: 0 !important;
+}
 
 /*zacatek po menu*/
 .navbar {
