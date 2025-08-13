@@ -119,10 +119,9 @@ button {
 
 h2 {
     font-size: 20px !important;
-    font-weight: 700 !important;
+    font-weight: 500 !important;
     letter-spacing: 1px !important;
     color: #D689FF !important;
-    padding-bottom: 1rem;
 }
 
 h3 {
@@ -262,8 +261,4 @@ h3 {
   .completed h3 {
     text-decoration: line-through;
   }
-#taskTemplate {
-  display: none;
-}
-
 

@@ -112,7 +112,7 @@
                             </svg>
                             <select id="taskCat">
                                 <option value="">Select category</option>
-                                <option value="meat/fish">meat/fish</option>
+                                <option value="meat">meat</option>
                                 <option value="toilety">toilety</option>
                                 <option value="vegetable">vegetable</option>
                                 <option value="condiments">condiments</option>
@@ -145,11 +145,11 @@
                             </svg>All</button>
                     </div>
                     <div class="flex-column">
-                        <button class="btn " data-cat="meat/fish"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                        <button class="btn " data-cat="meat"><svg xmlns="http://www.w3.org/2000/svg" width="32"
                                 height="32" viewBox="0 0 24 24">
                                 <path fill="currentColor"
                                     d="m5.44 7.96l.52-.53c.58-.58 1.54-.58 2.14.04l.02.03c.49.5 1.14.74 1.85.81c.97.09 1.91.61 2.53 1.55c.68 1.08.67 2.52-.04 3.59a3.322 3.322 0 0 1-5.18.55c-.56-.55-.88-1.26-.96-2c-.08-.73-.37-1.42-.88-1.93c-.58-.57-.58-1.53 0-2.11M9.64 16c-1.17 0-2.26-.45-3.07-1.28c-.7-.72-1.14-1.62-1.25-2.6c-.03-.3-.12-.69-.36-1.05C4.36 11.9 4 12.9 4 14c0 1.64.8 3.09 2.03 4H19v-1c0-3.6-2.39-6.65-5.66-7.65c.89 1.4.87 3.27-.04 4.65c-.8 1.25-2.18 2-3.66 2m5.14-8.44h1.27c.87 0 1.63.61 1.63 1.7V10h1.25V9c0-1.5-1.33-2.64-2.88-2.64h-1.27c-.83 0-1.54-.82-1.54-1.66s.71-1.46 1.54-1.46V2C13.24 2 12 3.24 12 4.78s1.24 2.78 2.78 2.78M4.5 7.55c.06-.1.14-.2.23-.3l.52-.52c.09-.09.19-.16.29-.23L4.13 5.07c.14-.27.09-.62-.13-.85a.767.767 0 0 0-1.07 0c-.14.14-.21.31-.22.49c-.18.01-.35.08-.49.22c-.29.29-.29.77 0 1.07c.23.22.57.27.85.13L4.5 7.55m13.89-3.16c.51-.51.83-1.2.83-1.97h-1.25c0 .83-.7 1.53-1.53 1.53v1.24c1.86 0 3.32 1.52 3.32 3.38V11H21V8.57a4.61 4.61 0 0 0-2.61-4.18M5 21h14c1.11 0 2-.89 2-2H3a2 2 0 0 0 2 2Z" />
-                            </svg>meat/fish</button>
+                            </svg>meat</button>
                     </div>
                     <div class="flex-column">
                         <button class="btn " data-cat="toilety"><svg xmlns="http://www.w3.org/2000/svg" height="32px"
@@ -233,121 +233,225 @@
 
         <div class="tasks">
             <div id="todoTasks">
-                <div id="taskTemplate" style="display:none;">
-    <div class="box d-flex gap-4 mt-2 task-item">
-        <button class="complete-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                <path
-                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-            </svg>
-        </button>
-        <div class="text flex-column">
-            <h3 class="task-name"></h3>
-            <p class="task-category"></p>
-        </div>
-    </div>
-</div>
+                <template id="taskTemplate">
+                    <div class="box d-flex gap-4 mt-2 task-item">
+                        <button class="complete-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                        </button>
+                        <div class="text flex-column">
+                            <h3 class="task-name"></h3>
+                            <p class="task-category"></p>
+                        </div>
+                    </div>
+                </template>
+                <div>
+                    <div class="box d-flex gap-4 mt-2 ">
+                        <button class="complete-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                        </button>
+                        <div class="text flex-column">
+                            <h3>EGGS</h3>
+                            <p>category: baking</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="box d-flex gap-4 mt-2 ">
+                            <button class="complete-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                </svg>
+                            </button>
+                            <div class="text flex-column">
+                                <h3>Chicken</h3>
+                                <p>category: meat</p>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div>
+                        <div class="box d-flex gap-4 mt-2 ">
+                            <button class="complete-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                </svg>
+                            </button>
+                            <div class="text flex-column">
+                                <h3>OLIVE OIL</h3>
+                                <p>category: condiments</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <div id="done" class="pt-3">
+                <h2 class="pt-2 done">Bought</h2>
+                <div class="box d-flex gap-4 mt-2 completed">
+                    <button class="complete-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                        </svg>
+                    </button>
+                    <div class="text flex-column">
+                        <h3>PAPER TOWEL</h3>
+                        <p>category: toitely</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="box d-flex gap-4 mt-2 completed">
+                        <button class="complete-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                        </button>
+                        <div class="text flex-column">
+                            <h3>onions</h3>
+                            <p>category: vegetable</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="box d-flex gap-4 mt-2 completed">
+                        <button class="complete-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                        </button>
+                        <div class="text flex-column">
+                            <h3>SOAP</h3>
+                            <p>category: toilety</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="box d-flex gap-4 mt-2 completed">
+                        <button class="complete-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                        </button>
+                        <div class="text flex-column">
+                            <h3>COOKIES</h3>
+                            <p>category: snacks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
         </div>
 
+        <script>
+            const obsah = document.querySelector('.obsah');
 
+            function scale() {
+                const scaleX = window.innerWidth / 412;
+                const scaleY = window.innerHeight / 917;
+                const scale = Math.min(scaleX, scaleY, 1);
+                obsah.style.transform = `scale(${scale})`;
+            }
 
+            window.addEventListener('resize', scale);
+            scale();
+        </script>
+        <script>
 
-    </div>
-    
-    <script>
-        const obsah = document.querySelector('.obsah');
+            document.addEventListener('DOMContentLoaded', () => {
+                const taskForm = document.getElementById('taskForm');
+                const showFormBtn = document.getElementById('showForm');
+                const cancelBtn = document.getElementById('cancelBtn');
+                const addTaskBtn = document.getElementById('addTaskBtn');
+                const taskNameInput = document.getElementById('taskName');
+                const taskCatSelect = document.getElementById('taskCat');
+                const taskNoteInput = document.getElementById('taskNote');
+                const todoContainer = document.getElementById('todoTasks');
+                const taskTemplate = document.getElementById('taskTemplate');
 
-        function scale() {
-            const scaleX = window.innerWidth / 412;
-            const scaleY = window.innerHeight / 917;
-            const scale = Math.min(scaleX, scaleY, 1);
-            obsah.style.transform = `scale(${scale})`;
-        }
+                showFormBtn.onclick = () => taskForm.style.display = 'block';
+                cancelBtn.onclick = () => taskForm.style.display = 'none';
 
-        window.addEventListener('resize', scale);
-        scale();
-    </script>
-    <script>
-        
-        document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('taskForm');
-    const todo = document.getElementById('todoTasks');
-    const done = document.getElementById('doneTasks');
-    const showFormBtn = document.getElementById('showForm');
-    const cancelBtn = document.getElementById('cancelBtn');
-    const addTaskBtn = document.getElementById('addTaskBtn');
-    const taskNameInput = document.getElementById('taskName');
-    const taskCatSelect = document.getElementById('taskCat');
-    const taskNoteInput = document.getElementById('taskNote');
-    const taskTemplate = document.getElementById('taskTemplate');
+                addTaskBtn.onclick = () => {
+                    const name = taskNameInput.value.trim();
+                    const cat = taskCatSelect.value.trim();
+                    const note = taskNoteInput.value.trim();
 
-    let currentFilter = "all";
+                    if (name && cat) {
+                        const newTaskItem = taskTemplate.content.cloneNode(true);
+                        const taskElement = newTaskItem.querySelector('.task-item');
 
-    
-    showFormBtn.onclick = () => form.style.display = 'block';
-    cancelBtn.onclick = () => form.style.display = 'none';
+                        taskElement.querySelector('h3').textContent = name;
+                        taskElement.querySelector('p').textContent = note ? note : `Category: ${cat}`;
+                        taskElement.dataset.category = cat;
 
- 
-    addTaskBtn.onclick = () => {
-        const name = taskNameInput.value.trim();
-        const cat = taskCatSelect.value.trim();
-        const note = taskNoteInput.value.trim();
+                        todoContainer.appendChild(newTaskItem);
 
-        if (!name || !cat) {
-            return alert("Vyplňte název a kategorii.");
-        }
-
-        
-        const newTaskItem = taskTemplate.cloneNode(true);
-        newTaskItem.style.display = 'block';
-        newTaskItem.removeAttribute('id');
-
-        const taskBox = newTaskItem.querySelector('.task-item');
-        taskBox.querySelector('h3').textContent = name;
-        taskBox.querySelector('p').textContent = note ? note : `Category: ${cat}`;
-        taskBox.dataset.category = cat;
-
-       
-        taskBox.onclick = () => {
-            (taskBox.parentElement === done ? todo : done).appendChild(taskBox);
-            applyFilter();
-        };
-
-        todo.appendChild(taskBox);
-        
-        form.style.display = "none";
-        taskNameInput.value = "";
-        taskCatSelect.value = "";
-        taskNoteInput.value = "";
-        
-        applyFilter();
-    };
-
-
-    document.querySelectorAll("#filterBtns .btn").forEach(b => {
-        b.onclick = () => {
-            currentFilter = b.dataset.cat;
-            applyFilter();
-        };
-    });
-
-    function applyFilter() {
-        [todo, done].forEach(list => {
-            [...list.children].forEach(box => {
-                const isVisible = (currentFilter === "all" || box.dataset.category === currentFilter);
-                box.style.display = isVisible ? '' : 'none';
+                        taskForm.style.display = 'none';
+                        taskNameInput.value = '';
+                        taskCatSelect.value = '';
+                        taskNoteInput.value = '';
+                        taskNoteInput.value = '';
+                    } else {
+                        alert('fill out task name and category');
+                    }
+                };
             });
-        });
-    }
 
-    applyFilter();
-});
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const todoContainer = document.getElementById('todoTasks');
+                const doneContainer = document.getElementById('done');
+                const parentContainer = document.querySelector('.tasks');
+                function moveTask(taskBox) {
+                    if (taskBox.parentElement.id === 'todoTasks') {
+                        taskBox.classList.add('completed');
+                        doneContainer.appendChild(taskBox);
+                    } else {
+                        taskBox.classList.remove('completed');
+                        todoContainer.appendChild(taskBox);
+                    }
+                }
 
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+                parentContainer.addEventListener('click', (event) => {
+                    const completeBtn = event.target.closest('.complete-btn');
+                    if (completeBtn) {
+                        const taskBox = completeBtn.closest('.box');
+                        if (taskBox) {
+                            moveTask(taskBox);
+                        }
+                    }
+                });
+            });
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

@@ -1,16 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootstrap Offcanvas 420px</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
 </head>
-
 <body>
     <div class="obsah">
         <div class="d-flex nav-pic">
@@ -68,18 +64,15 @@
                                         d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
                                 </svg> Profile</a>
                         </li>
-
                     </ul>
                 </div>
             </div>
-
-
 
             <div class="main-pic">
                 <div class="pic">
                     <img src="images/picture/main-pic.png" height="100" alt="">
                 </div>
-                <button class="add" id="plus">
+                <button class="add" id="showForm">
                     <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px"
                         fill="#D689FF">
                         <path
@@ -89,10 +82,50 @@
                 <div class="name">
                     <p>LIDIYA</p>
                 </div>
+                <div id="taskForm" class="task" style="display:none;">
+                                    <button id="cancelBtn" class="cancelBtn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                            <path
+                                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                                        </svg>
+                                    </button>
+                                    <div class="form pt-5 flex-column d-flex gap-3">
+                                        <div class="name-form">
+                                            <input id="taskName" placeholder="Enter task name">
+                                        </div>
+                                        <div class="note d-flex align-items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-journal-text me-3" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
+                                                <path
+                                                    d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2" />
+                                                <path
+                                                    d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z" />
+                                            </svg>
+                                            <input id="taskNote" placeholder="Enter note...">
+                                        </div>
+                                        <div class="tag">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-tags me-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3 2v4.586l7 7L14.586 9l-7-7zM2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586z" />
+                                                <path
+                                                    d="M5.5 5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m0 1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M1 7.086a1 1 0 0 0 .293.707L8.75 15.25l-.043.043a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 0 7.586V3a1 1 0 0 1 1-1z" />
+                                            </svg>
+                                            <select id="taskCat">
+                                                <option value="">Select category</option>
+                                                <option value="your">Your task</option>
+                                                <option value="group">Group task</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button id="addTaskBtn">Přidat</button>
+                                </div>
             </div>
         </div>
-       <div class="screens">
-
+        <div class="screens">
             <div class="choose d-flex">
                 <div class="tab todo active col-6 text-center" onclick="showTab('todo')">
                     <p>TO DO</p>
@@ -101,62 +134,33 @@
                     <p>DONE</p>
                 </div>
             </div>
-
-
             <div class="slider-container">
                 <div class="slider" id="slider">
-
                     <div id="todoContent" class="content">
                         <h2>YOUR TASKS</h2>
                         <div class="tasks">
                             <div class="me">
                                 <div id="todoYour">
-
+                                    <template id="taskTemplate">
+                                        <div class="box d-flex gap-4 mt-2 task-item">
+                                            <button class="complete-btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    fill="currentColor" class="bi bi-check-circle-fill"
+                                                    viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                                </svg>
+                                            </button>
+                                            <div class="text flex-column">
+                                                <h3 class="task-name"></h3>
+                                                <p class="from you"></p>
+                                            </div>
+                                        </div>
+                                    </template>
                                 </div>
-                                <div id="taskForm" class="task" style="display:none;">
-    <button id="cancelBtn" class="cancelBtn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg"
-            viewBox="0 0 16 16">
-            <path
-                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-        </svg>
-    </button>
-    <div class="form pt-5 flex-column d-flex gap-3">
-        <div class="name">
-            <input id="taskName" placeholder="Enter task name">
-        </div>
-        <div class="note d-flex align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                class="bi bi-journal-text me-3" viewBox="0 0 16 16">
-                <path
-                    d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
-                <path
-                    d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2" />
-                <path
-                    d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z" />
-            </svg>
-            <input id="taskNote" placeholder="Enter note...">
-        </div>
-        <div class="tag">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-tags me-2"
-                viewBox="0 0 16 16">
-                <path
-                    d="M3 2v4.586l7 7L14.586 9l-7-7zM2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586z" />
-                <path
-                    d="M5.5 5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m0 1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M1 7.086a1 1 0 0 0 .293.707L8.75 15.25l-.043.043a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 0 7.586V3a1 1 0 0 1 1-1z" />
-            </svg>
-            <select id="taskCat">
-                <option value="">Select category</option>
-                <option value="your">Your task</option>
-                <option value="group">Group task</option>
-            </select>
-        </div>
-    </div>
-    <button id="addTaskBtn">Přidat</button>
-</div>
-
+                                
                                 <div class="box d-flex gap-4 mt-2" data-category="your">
-                                    <button>
+                                    <button class="complete-btn">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
                                             <path
@@ -164,13 +168,12 @@
                                         </svg>
                                     </button>
                                     <div class="text flex-column">
-                                        <h3>CLEAN UP YOUr room</h3>
+                                        <h3>CLEAN UP YOUR ROOM</h3>
                                         <p class="dot">from Dad</p>
                                     </div>
                                 </div>
-
                                 <div class="box d-flex gap-4 mt-2" data-category="your">
-                                    <button>
+                                    <button class="complete-btn">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
                                             <path
@@ -184,234 +187,131 @@
                                 </div>
                             </div>
                         </div>
-
                         <h2 class="pt-5">GROUP TASKS</h2>
                         <div class="tasks">
                             <div class="me">
                                 <div id="todoGroup">
-
-                                </div>
-
-
-                                <div class="box d-flex gap-4 mt-2" data-category="group">
-                                    <button>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                                            <path
-                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                                        </svg>
-                                    </button>
-                                    <div class="text flex-column">
-                                        <h3>PICK UP THE PACKAGE</h3>
-                                        <p class="dot">from Mom</p>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="box d-flex gap-4 mt-2" data-category="your">
-                                    <button>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                                            <path
-                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                                        </svg>
-                                    </button>
-                                    <div class="text flex-column">
-                                        <h3>TAKE OUT THE TRASH</h3>
-                                        <p class="dot">from Dad</p>
-                                    </div>
-                                </div>
-
-                                <div class="box d-flex gap-4 mt-2" data-category="your">
-                                    <button>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                                            <path
-                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                                        </svg>
-                                    </button>
-                                    <div class="text flex-column">
-                                        <h3>clean the bathroom</h3>
-                                        <p class="dot">from Mom</p>
+                                    <div class="box d-flex gap-4 mt-2" data-category="group">
+                                        <button class="complete-btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                            </svg>
+                                        </button>
+                                        <div class="text flex-column">
+                                            <h3>PICK UP THE PACKAGE</h3>
+                                            <p class="dot">from Mom</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
-
-
-                    <div id="done"class="content">
-                        <div id="doneTasks">
-
+                    <div id="doneContent" class="content">
                         </div>
-                        <div class="box d-flex gap-4 mt-2 completed" data-category="group">
-                            <button>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                    class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                                </svg>
-                            </button>
-                            <div class="text flex-column">
-                                <h3>MAKE DINNER</h3>
-                                <p class="dot">from Dad</p>
-                            </div>
-                        </div>
-
-                        <div class="box d-flex gap-4 mt-2 completed" data-category="your">
-                            <button>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                    class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                                </svg>
-                            </button>
-                            <div class="text flex-column">
-                                <h3>showel snow</h3>
-                                <p class="dot">from Dad</p>
-                            </div>
-                        </div>
-
-                        <div class="box d-flex gap-4 mt-2 completed" data-category="your">
-                            <button>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                    class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                                </svg>
-                            </button>
-                            <div class="text flex-column">
-                                <h3>FOLD YOUR CLOTHES</h3>
-                                <p class="dot">from Mom</p>
-                            </div>
-                        </div>
-                        <div class="box d-flex gap-4 mt-2 completed" data-category="group">
-                            <button>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                    class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                                </svg>
-                            </button>
-                            <div class="text flex-column">
-                                <h3>Wash mom's car</h3>
-                                <p class="dot">from Dad</p>
-                            </div>
-                        </div>
-
-                    </div>
                 </div>
             </div>
         </div>
-
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        document.querySelectorAll('.box button').forEach(button => {
-    button.addEventListener('click', () => {
-        const box = button.closest('.box');
-        const isCompleted = box.classList.toggle('completed');
+        document.addEventListener('DOMContentLoaded', () => {
+            const todoYour = document.getElementById('todoYour');
+            const todoGroup = document.getElementById('todoGroup');
+            const doneContainer = document.getElementById('doneContent');
+            const slider = document.getElementById('slider');
+            const tabs = document.querySelectorAll('.tab');
 
-        const category = box.dataset.category;
+            const showFormBtn = document.getElementById('showForm');
+            const taskForm = document.getElementById('taskForm');
+            const cancelBtn = document.getElementById('cancelBtn');
+            const addTaskBtn = document.getElementById('addTaskBtn');
+            const taskNameInput = document.getElementById('taskName');
+            const taskNoteInput = document.getElementById('taskNote');
+            const taskCatSelect = document.getElementById('taskCat');
+            const taskTemplate = document.getElementById('taskTemplate');
 
-        const doneContainer = document.getElementById('doneTasks');
-        const yourTodo = document.getElementById('todoYour');
-        const groupTodo = document.getElementById('todoGroup');
-
-        if (isCompleted) {
-            
-            doneContainer.prepend(box);
-        } else {
-            if (category === 'your') {
-                yourTodo.appendChild(box);
-            } else if (category === 'group') {
-                groupTodo.appendChild(box);
+            // Skalování aplikace
+            const obsah = document.querySelector('.obsah');
+            function scale() {
+                const scaleX = window.innerWidth / 412;
+                const scaleY = window.innerHeight / 917;
+                const scale = Math.min(scaleX, scaleY, 1);
+                obsah.style.transform = `scale(${scale})`;
             }
-        }
-    });
-});
+            window.addEventListener('resize', scale);
+            scale();
 
-
-
-        const obsah = document.querySelector('.obsah');
-
-        function scale() {
-            const scaleX = window.innerWidth / 412;
-            const scaleY = window.innerHeight / 917;
-            const scale = Math.min(scaleX, scaleY, 1);
-            obsah.style.transform = `scale(${scale})`;
-        }
-
-        window.addEventListener('resize', scale);
-        scale();
-
-
-        let activeTab = 'todo';
-
+            // Přepínání tabů
+            let activeTab = 'todo';
             function showTab(tab) {
                 if (tab === activeTab) return;
-
-                const slider = document.getElementById('slider');
-                const tabs = document.querySelectorAll('.tab');
-
-                // Posuneme slider podle zvolené záložky
-                if (tab === 'todo') {
-                    slider.style.transform = 'translateX(0)';
-                } else if (tab === 'done') {
-                    slider.style.transform = 'translateX(-100%)';
-                }
-
-                // Přepneme aktivní třídu u záložek
+                slider.style.transform = (tab === 'todo') ? 'translateX(0)' : 'translateX(-100%)';
                 tabs.forEach(t => t.classList.remove('active'));
-                document.querySelector('.tab.' + tab).classList.add('active');
-
+                document.querySelector(`.tab.${tab}`).classList.add('active');
                 activeTab = tab;
             }
+            document.querySelector('.tab.todo').addEventListener('click', () => showTab('todo'));
+            document.querySelector('.tab.done').addEventListener('click', () => showTab('done'));
 
+            // Zobrazení a skrytí formuláře
+            if (showFormBtn) showFormBtn.addEventListener('click', () => { taskForm.style.display = 'block'; });
+            if (cancelBtn) cancelBtn.addEventListener('click', () => { taskForm.style.display = 'none'; });
 
+            // Přidání nového úkolu z formuláře
+            if (addTaskBtn) addTaskBtn.addEventListener('click', () => {
+                const name = taskNameInput.value.trim();
+                const note = taskNoteInput.value.trim();
+                const category = taskCatSelect.value.trim();
 
-            const form = document.getElementById('taskForm'),
-                todo = document.getElementById('todoTasks'),
-                done = document.getElementById('doneTasks');
-            let currentFilter = "all";
+                if (!name || !category) {
+                    alert("Vyplňte prosím název a kategorii.");
+                    return;
+                }
 
-            showForm.onclick = () => form.style.display = "block";
-            cancelBtn.onclick = () => form.style.display = "none";
+                // Vytvoření nového úkolu z template
+                const newTaskClone = taskTemplate.content.cloneNode(true);
+                const newTaskElement = newTaskClone.querySelector('.box');
+                
+                newTaskElement.dataset.category = category;
+                newTaskElement.querySelector('.task-name').textContent = name;
+                newTaskElement.querySelector('.task-category').textContent = note ? note : `from ${category}`;
 
-            addTaskBtn.onclick = () => {
-                let name = taskName.value.trim(),
-                    cat = taskCat.value.trim();
-                if (!name || !cat) return alert("fill in the nam and category");
-                let box = document.createElement("div");
-                box.textContent = name + " [" + cat + "]";
-                box.dataset.group = cat;
-                box.onclick = () => {
-                    (box.parentElement === done ? todo : done).appendChild(box);
-                    applyFilter();
-                };
-                todo.appendChild(box);
-                form.style.display = "none";
-                taskName.value = taskCat.value = "";
-                applyFilter();
-            };
+                // Přidání úkolu do správné kategorie
+                if (category === 'your') {
+                    todoYour.appendChild(newTaskElement);
+                } else if (category === 'group') {
+                    todoGroup.appendChild(newTaskElement);
+                }
 
-            document.querySelectorAll("#filterBtns .btn").forEach(b => {
-                b.onclick = () => { currentFilter = b.dataset.cat; applyFilter(); };
+                taskForm.style.display = 'none';
+                taskNameInput.value = '';
+                taskNoteInput.value = '';
+                taskCatSelect.value = '';
             });
 
-            function applyFilter() {
-                [todo, done].forEach(list => {
-                    [...list.children].forEach(box => {
-                        box.style.display = (currentFilter === "all" || box.dataset.group === currentFilter) ? "" : "none";
-                    });
-                });
-            }
+            // Přesouvání úkolů po kliknutí (delegování událostí)
+            document.body.addEventListener('click', (event) => {
+                const completeBtn = event.target.closest('.complete-btn');
+                if (completeBtn) {
+                    const taskBox = completeBtn.closest('.box');
+                    const category = taskBox.dataset.category;
+
+                    if (taskBox.parentElement.id !== 'doneContent') { // Úkol je v "To Do"
+                        taskBox.classList.add('completed');
+                        doneContainer.prepend(taskBox);
+                    } else { // Úkol je v "Done"
+                        taskBox.classList.remove('completed');
+                        if (category === 'your') {
+                            todoYour.prepend(taskBox);
+                        } else if (category === 'group') {
+                            todoGroup.prepend(taskBox);
+                        }
+                    }
+                }
+            });
+        });
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
-	
