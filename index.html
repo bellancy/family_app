@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,46 +79,19 @@
                 <div class="pic">
                     <img src="images/picture/main-pic.png" height="100" alt="">
                 </div>
-                <button class="add" id="showForm">
+                <button class="add" id="plus">
                     <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px"
                         fill="#D689FF">
                         <path
                             d="M440-440v120q0 17 11.5 28.5T480-280q17 0 28.5-11.5T520-320v-120h120q17 0 28.5-11.5T680-480q0-17-11.5-28.5T640-520H520v-120q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640v120H320q-17 0-28.5 11.5T280-480q0 17 11.5 28.5T320-440h120Zm40 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z" />
                     </svg>
                 </button>
-
-                <div id="taskForm" class="task">
-                    <div id="taskForm" style="display:none;">
-                        <select id="taskAssignee">
-                            <option value="me">Já</option>
-                            <option value="all">Všichni</option>
-                            <option value="alice">Alice</option>
-                            <option value="bob">Bob</option>
-                            <option value="carol">Carol</option>
-                            <!-- další jména -->
-                        </select>
-
-                        <select id="taskType">
-                            <option value="person">Pro osobu</option>
-                            <option value="group">Skupina</option>
-                        </select>
-
-                        <input id="taskName" placeholder="Název úkolu">
-                        <input id="taskNote" placeholder="Poznámky">
-                        <button id="addTaskBtn">Přidat</button>
-                        <button id="cancelBtn">Zrušit</button>
-                    </div>
-                    <button id="addTaskBtn">Přidat</button>
-
-
-                </div>
                 <div class="name">
                     <p>LIDIYA</p>
                 </div>
             </div>
         </div>
-
-        <div class="screens">
+       <div class="screens">
 
             <div class="choose d-flex">
                 <div class="tab todo active col-6 text-center" onclick="showTab('todo')">
@@ -136,24 +110,52 @@
                         <h2>YOUR TASKS</h2>
                         <div class="tasks">
                             <div class="me">
-                                <div id="yourTasks">
+                                <div id="todoYour">
 
                                 </div>
-                                <div class="box d-flex gap-4 mt-2 " id="taskTemplate" style="display:none;">
-                                    <button>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                                            <path
-                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                                        </svg>
-                                    </button>
-                                    <div class="text flex-column">
-                                        <h3>Do the dishes</h3>
-                                        <p class="dot">from Mom</p>
-                                    </div>
-                                </div>
+                                <div id="taskForm" class="task" style="display:none;">
+    <button id="cancelBtn" class="cancelBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg"
+            viewBox="0 0 16 16">
+            <path
+                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+        </svg>
+    </button>
+    <div class="form pt-5 flex-column d-flex gap-3">
+        <div class="name">
+            <input id="taskName" placeholder="Enter task name">
+        </div>
+        <div class="note d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                class="bi bi-journal-text me-3" viewBox="0 0 16 16">
+                <path
+                    d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
+                <path
+                    d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2" />
+                <path
+                    d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z" />
+            </svg>
+            <input id="taskNote" placeholder="Enter note...">
+        </div>
+        <div class="tag">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-tags me-2"
+                viewBox="0 0 16 16">
+                <path
+                    d="M3 2v4.586l7 7L14.586 9l-7-7zM2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586z" />
+                <path
+                    d="M5.5 5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m0 1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M1 7.086a1 1 0 0 0 .293.707L8.75 15.25l-.043.043a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 0 7.586V3a1 1 0 0 1 1-1z" />
+            </svg>
+            <select id="taskCat">
+                <option value="">Select category</option>
+                <option value="your">Your task</option>
+                <option value="group">Group task</option>
+            </select>
+        </div>
+    </div>
+    <button id="addTaskBtn">Přidat</button>
+</div>
 
-                                <div class="box d-flex gap-4 mt-2">
+                                <div class="box d-flex gap-4 mt-2" data-category="your">
                                     <button>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
@@ -167,7 +169,7 @@
                                     </div>
                                 </div>
 
-                                <div class="box d-flex gap-4 mt-2">
+                                <div class="box d-flex gap-4 mt-2" data-category="your">
                                     <button>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
@@ -186,12 +188,12 @@
                         <h2 class="pt-5">GROUP TASKS</h2>
                         <div class="tasks">
                             <div class="me">
-                                <div id="groupTasks">
+                                <div id="todoGroup">
 
                                 </div>
 
 
-                                <div class="box d-flex gap-4 mt-2">
+                                <div class="box d-flex gap-4 mt-2" data-category="group">
                                     <button>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
@@ -207,7 +209,7 @@
 
 
 
-                                <div class="box d-flex gap-4 mt-2">
+                                <div class="box d-flex gap-4 mt-2" data-category="your">
                                     <button>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
@@ -221,7 +223,7 @@
                                     </div>
                                 </div>
 
-                                <div class="box d-flex gap-4 mt-2">
+                                <div class="box d-flex gap-4 mt-2" data-category="your">
                                     <button>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
@@ -241,11 +243,11 @@
 
 
 
-                    <div id="doneContent" class="content">
+                    <div id="done"class="content">
                         <div id="doneTasks">
 
                         </div>
-                        <div class="box d-flex gap-4 mt-2 completed">
+                        <div class="box d-flex gap-4 mt-2 completed" data-category="group">
                             <button>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                     class="bi bi-check-circle-fill" viewBox="0 0 16 16">
@@ -259,7 +261,7 @@
                             </div>
                         </div>
 
-                        <div class="box d-flex gap-4 mt-2 completed">
+                        <div class="box d-flex gap-4 mt-2 completed" data-category="your">
                             <button>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                     class="bi bi-check-circle-fill" viewBox="0 0 16 16">
@@ -273,7 +275,7 @@
                             </div>
                         </div>
 
-                        <div class="box d-flex gap-4 mt-2 completed">
+                        <div class="box d-flex gap-4 mt-2 completed" data-category="your">
                             <button>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                     class="bi bi-check-circle-fill" viewBox="0 0 16 16">
@@ -286,7 +288,7 @@
                                 <p class="dot">from Mom</p>
                             </div>
                         </div>
-                        <div class="box d-flex gap-4 mt-2 completed">
+                        <div class="box d-flex gap-4 mt-2 completed" data-category="group">
                             <button>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                     class="bi bi-check-circle-fill" viewBox="0 0 16 16">
@@ -295,7 +297,7 @@
                                 </svg>
                             </button>
                             <div class="text flex-column">
-                                <h3>TAKE OUT THE TRASH</h3>
+                                <h3>Wash mom's car</h3>
                                 <p class="dot">from Dad</p>
                             </div>
                         </div>
@@ -305,31 +307,48 @@
             </div>
         </div>
 
-        <script>
+    </div>
+    <script>
+        document.querySelectorAll('.box button').forEach(button => {
+    button.addEventListener('click', () => {
+        const box = button.closest('.box');
+        const isCompleted = box.classList.toggle('completed');
+
+        const category = box.dataset.category;
+
+        const doneContainer = document.getElementById('doneTasks');
+        const yourTodo = document.getElementById('todoYour');
+        const groupTodo = document.getElementById('todoGroup');
+
+        if (isCompleted) {
+            
+            doneContainer.prepend(box);
+        } else {
+            if (category === 'your') {
+                yourTodo.appendChild(box);
+            } else if (category === 'group') {
+                groupTodo.appendChild(box);
+            }
+        }
+    });
+});
 
 
-            document.querySelectorAll('.box button').forEach(button => {
-                button.addEventListener('click', () => {
-                    const box = button.closest('.box');
-                    const todoContainer = document.getElementById('todoTasks');
-                    const doneContainer = document.getElementById('doneTasks');
 
-                    // přepni stav dokončení
-                    const isCompleted = box.classList.toggle('completed');
+        const obsah = document.querySelector('.obsah');
 
-                    if (isCompleted) {
-                        // pokud je úkol hotový, přesun ho do done (na začátek)
-                        doneContainer.prepend(box);
-                    } else {
-                        // pokud úkol vracíme do todo, přesun na konec todo
-                        todoContainer.appendChild(box);
-                    }
-                });
-            });
+        function scale() {
+            const scaleX = window.innerWidth / 412;
+            const scaleY = window.innerHeight / 917;
+            const scale = Math.min(scaleX, scaleY, 1);
+            obsah.style.transform = `scale(${scale})`;
+        }
+
+        window.addEventListener('resize', scale);
+        scale();
 
 
-
-            let activeTab = 'todo';
+        let activeTab = 'todo';
 
             function showTab(tab) {
                 if (tab === activeTab) return;
@@ -389,24 +408,10 @@
                     });
                 });
             }
-        </script>
-    </div>
-
-    <script>
-        const obsah = document.querySelector('.obsah');
-
-        function scale() {
-            const scaleX = window.innerWidth / 412;
-            const scaleY = window.innerHeight / 917;
-            const scale = Math.min(scaleX, scaleY, 1);
-            obsah.style.transform = `scale(${scale})`;
-        }
-
-        window.addEventListener('resize', scale);
-        scale();
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
+	
