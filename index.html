@@ -87,50 +87,25 @@
                 </button>
 
                 <div id="taskForm" class="task">
-                    <button id="cancelBtn" class="cancelBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                            <path
-                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-                        </svg></button>
-                    <div class="form pt-5 flex-column d-flex gap-3">
-                        <div class="name">
-                            <input id="taskName" placeholder="Enter task">
-                        </div>
-                        <div class="note d-flex align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                                class="bi bi-journal-text me-3" viewBox="0 0 16 16">
-                                <path
-                                    d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
-                                <path
-                                    d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2" />
-                                <path
-                                    d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z" />
-                            </svg>
-                            <input id="taskNote" placeholder="Enter note...">
-                        </div>
-                        <div class="tag">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                                class="bi bi-tags me-2" viewBox="0 0 16 16">
-                                <path
-                                    d="M3 2v4.586l7 7L14.586 9l-7-7zM2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586z" />
-                                <path
-                                    d="M5.5 5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m0 1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M1 7.086a1 1 0 0 0 .293.707L8.75 15.25l-.043.043a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 0 7.586V3a1 1 0 0 1 1-1z" />
-                            </svg>
-                            <select id="taskCat">
-                                <option value="">Select category</option>
-                                <option value="meat/fish">meat/fish</option>
-                                <option value="toilety">toilety</option>
-                                <option value="vegetable">vegetable</option>
-                                <option value="condiments">condiments</option>
-                                <option value="snacks">snacks</option>
-                                <option value="drinks">drinks</option>
-                                <option value="baking">baking</option>
-                                <option value="frozen">frozen</option>
-                                <option value="pastry">pastry</option>
-                                <option value="selfcare">selfcare</option>
-                            </select>
-                        </div>
+                    <div id="taskForm" style="display:none;">
+                        <select id="taskAssignee">
+                            <option value="me">Já</option>
+                            <option value="all">Všichni</option>
+                            <option value="alice">Alice</option>
+                            <option value="bob">Bob</option>
+                            <option value="carol">Carol</option>
+                            <!-- další jména -->
+                        </select>
 
+                        <select id="taskType">
+                            <option value="person">Pro osobu</option>
+                            <option value="group">Skupina</option>
+                        </select>
+
+                        <input id="taskName" placeholder="Název úkolu">
+                        <input id="taskNote" placeholder="Poznámky">
+                        <button id="addTaskBtn">Přidat</button>
+                        <button id="cancelBtn">Zrušit</button>
                     </div>
                     <button id="addTaskBtn">Přidat</button>
 
@@ -160,9 +135,9 @@
                     <div id="todoContent" class="content">
                         <h2>YOUR TASKS</h2>
                         <div class="tasks">
-                            <div class="me" >
+                            <div class="me">
                                 <div id="yourTasks">
-                                   
+
                                 </div>
                                 <div class="box d-flex gap-4 mt-2 " id="taskTemplate" style="display:none;">
                                     <button>
@@ -210,11 +185,11 @@
 
                         <h2 class="pt-5">GROUP TASKS</h2>
                         <div class="tasks">
-                            <div class="me" >
+                            <div class="me">
                                 <div id="groupTasks">
-                                   
+
                                 </div>
-                                
+
 
                                 <div class="box d-flex gap-4 mt-2">
                                     <button>
@@ -230,7 +205,7 @@
                                     </div>
                                 </div>
 
-                               
+
 
                                 <div class="box d-flex gap-4 mt-2">
                                     <button>
@@ -268,7 +243,7 @@
 
                     <div id="doneContent" class="content">
                         <div id="doneTasks">
-                          
+
                         </div>
                         <div class="box d-flex gap-4 mt-2 completed">
                             <button>
@@ -299,7 +274,7 @@
                         </div>
 
                         <div class="box d-flex gap-4 mt-2 completed">
-                            <button >
+                            <button>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                     class="bi bi-check-circle-fill" viewBox="0 0 16 16">
                                     <path
@@ -312,7 +287,7 @@
                             </div>
                         </div>
                         <div class="box d-flex gap-4 mt-2 completed">
-                            <button >
+                            <button>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                     class="bi bi-check-circle-fill" viewBox="0 0 16 16">
                                     <path
@@ -331,7 +306,7 @@
         </div>
 
         <script>
-        
+
 
             document.querySelectorAll('.box button').forEach(button => {
                 button.addEventListener('click', () => {
@@ -378,42 +353,42 @@
 
 
 
-        const form = document.getElementById('taskForm'),
-            todo = document.getElementById('todoTasks'),
-            done = document.getElementById('doneTasks');
-        let currentFilter = "all";
+            const form = document.getElementById('taskForm'),
+                todo = document.getElementById('todoTasks'),
+                done = document.getElementById('doneTasks');
+            let currentFilter = "all";
 
-        showForm.onclick = () => form.style.display = "block";
-        cancelBtn.onclick = () => form.style.display = "none";
+            showForm.onclick = () => form.style.display = "block";
+            cancelBtn.onclick = () => form.style.display = "none";
 
-        addTaskBtn.onclick = () => {
-            let name = taskName.value.trim(),
-                cat = taskCat.value.trim();
-            if (!name || !cat) return alert("fill in the nam and category");
-            let box = document.createElement("div");
-            box.textContent = name + " [" + cat + "]";
-            box.dataset.group = cat;
-            box.onclick = () => {
-                (box.parentElement === done ? todo : done).appendChild(box);
+            addTaskBtn.onclick = () => {
+                let name = taskName.value.trim(),
+                    cat = taskCat.value.trim();
+                if (!name || !cat) return alert("fill in the nam and category");
+                let box = document.createElement("div");
+                box.textContent = name + " [" + cat + "]";
+                box.dataset.group = cat;
+                box.onclick = () => {
+                    (box.parentElement === done ? todo : done).appendChild(box);
+                    applyFilter();
+                };
+                todo.appendChild(box);
+                form.style.display = "none";
+                taskName.value = taskCat.value = "";
                 applyFilter();
             };
-            todo.appendChild(box);
-            form.style.display = "none";
-            taskName.value = taskCat.value = "";
-            applyFilter();
-        };
 
-        document.querySelectorAll("#filterBtns .btn").forEach(b => {
-            b.onclick = () => { currentFilter = b.dataset.cat; applyFilter(); };
-        });
-
-        function applyFilter() {
-            [todo, done].forEach(list => {
-                [...list.children].forEach(box => {
-                    box.style.display = (currentFilter === "all" || box.dataset.group === currentFilter) ? "" : "none";
-                });
+            document.querySelectorAll("#filterBtns .btn").forEach(b => {
+                b.onclick = () => { currentFilter = b.dataset.cat; applyFilter(); };
             });
-        }
+
+            function applyFilter() {
+                [todo, done].forEach(list => {
+                    [...list.children].forEach(box => {
+                        box.style.display = (currentFilter === "all" || box.dataset.group === currentFilter) ? "" : "none";
+                    });
+                });
+            }
         </script>
     </div>
 
