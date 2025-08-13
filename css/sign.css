@@ -1,0 +1,163 @@
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        
+        .obsah {
+            width: 412px;
+            height: 917px;
+            overflow-y: auto;
+            background: #1E1E1E;
+            position: relative;
+            overflow-x: hidden;
+            color: white;
+            padding-inline: 10px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            border-radius: 20px; 
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+        }
+
+       
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center; 
+            align-items: flex-start; 
+            min-height: 100vh;
+            
+        }
+
+        h1, h6, .forgot-password {
+            color: #ffffff;
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        h6 {
+            margin-top: 0;
+            margin-bottom: 2.5rem;
+            color: #999;
+        }
+
+        form {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .form-control {
+            background-color: #363636;
+            border: none;
+            border-radius: 15px;
+            height: 50px;
+            padding-left: 20px;
+            margin-bottom: 1rem;
+            font-size: 16px;
+            color: #ffffff;
+        }
+        
+        .form-control::placeholder {
+            color: #999;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 0 0 2px #7700c7;
+            background-color: #1E1E1E;
+            color: #ffffff;
+        }
+
+        .forgot-password {
+            display: block;
+            text-align: right;
+            font-size: 14px;
+            color: #999;
+            text-decoration: none;
+            margin-top: -10px;
+            margin-bottom: 2rem;
+        }
+
+        .signin-btn {
+            width: 100%;
+            height: 50px;
+            background-color: #ffffff;
+            color: #1E1E1E;     
+            border: none;
+            border-radius: 15px;
+            font-weight: 600;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .signin-btn:hover {
+            background-color: #D689FF;
+        }
+
+        /* Social Sign-in Styling */
+        .social-signin-divider {
+            margin-top: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+            color: #999;
+        }
+        
+        .social-signin-divider hr {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            border: 0;
+            border-top: 1px solid #363636;
+        }
+        
+        .social-signin-divider span {
+            background-color: #1E1E1E;
+            padding: 0 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .social-signin-options {
+            margin-top: 20px;
+        }
+
+        .social-btn {
+            width: 90%;
+            margin: auto;
+            height: 50px;
+            background-color: #363636;
+            color: #ffffff;
+            border: 1px solid #4a4a4a;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 020px;
+            font-weight: 500;
+            font-size: 16px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .social-btn:hover {
+            background-color: #4a4a4a;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        .arrow-icon {
+            font-size: 20px;
+            color: #999;
+        }
