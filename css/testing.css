@@ -15,7 +15,10 @@ body {
     align-items: center;
     max-height: 100vh;
 }
-
+button {
+    all: unset;
+    display: inline-block;
+}
 .obsah {
     
     width: 412px;
@@ -102,128 +105,17 @@ h1, h2, h3, h4, h5, h6, p {
 .offcanvas-body {
     padding-inline: 2rem !important;
 }
-   .navbar-nav .nav-item .nav-link svg {
+  
+ .navbar-nav .nav-item .nav-link svg {
   margin-bottom: 0 !important;
 }
-button {
-    all: unset;
-    display: inline-block;
-}
 /*zacatek po menu*/
-
-
-.add {
-    position: absolute;
-    right: 5rem;
-}
-
-h2 {
-    font-size: 20px !important;
-    font-weight: 700 !important;
-    letter-spacing: 1px !important;
-    color: #D689FF !important;
-    padding-bottom: 1rem;
-}
-
-h3 {
-    font-size: 16px !important;
-    font-weight: 500 !important;
-    letter-spacing: 1px !important;
-    color: white !important;
-    text-transform: uppercase;
-}
-
-h1 {
-    font-size: 24px!important;
-    color: #D689FF !important;
-    text-align: center;
-}
-.category h3 {
-    text-transform: none;
-}
-
-
-  
-.task {
-    border-radius: 30px;
-    height: 600px;
-    display:none;
-    position:fixed;
-    bottom:0;
-    left:0;
-    right:0;
-    padding: 3rem;
-    background:#171717;
-}
-.cancelBtn {
-    position: absolute;
-    right: 0;
-    padding: 2rem;
-    top: 0;
-}
-
-.form {
-    max-width: 300px; /* volitelně pro užší vzhled */
-}
-
-.form input {  
-    border: none;
-    border-bottom: 1px solid #8d8c8c;
-    width: 100%;
-    background-color: transparent;
-    outline: none;
-}
-
-#addTaskBtn {
-    padding: 5px;
-    padding-inline: 8px;
-    border: 2px solid #D689FF;
-    border-radius: 10px;
-    background: none;
-    margin-top: 2rem;
-    font-size: 16px;
-}
-#addTaskBtn:hover {
-    background-color: #D689FF;
-    color: #000;
-}
-.form select {
-    width: 60%;
-    background-color: transparent;
-    border-radius: 10px;
-    border: none;
-    padding: 5px;
-    margin-top: 2rem;
-    font-size: 18px;
-}
-.form .name input {
-    text-transform: uppercase;
-    color: #D689FF;
-    font-size: 20px;
-    font-weight: 500;
-}
-.form .note input {
-    font-size: 20px;
-}
-.form .note input,.form select {
-    color: #fff!important;
-}
-.category button{
-    color: #fff;
-    padding: 0;
-}
-.category button:hover{
-    color: #D689FF;
-}
-.filter {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-
-#filterBtns {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
- 
-  max-width: 100%;
-}
+.task {display:none;
+position:fixed;
+top:0;
+left:0;
+right:0;
+padding:10px;
+background:#fff;
+z-index:100;
+box-shadow:0 2px 5px rgba(0, 0, 0, 0.2);}

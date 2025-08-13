@@ -7,7 +7,7 @@
     <title>Bootstrap Offcanvas 420px</title>
     <link rel="stylesheet" href="css/shop.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
 </head>
 
 <body>
@@ -19,8 +19,7 @@
             </button>
         </nav>
 
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
             <div class="offcanvas-header">
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
@@ -36,14 +35,16 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="chat.html"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                height="24" fill="currentColor" class="bi bi-chat-dots-fill me-2 mb-1" viewBox="0 0 16 16">
+                                height="24" fill="currentColor" class="bi bi-chat-dots-fill me-2 mb-1"
+                                viewBox="0 0 16 16">
                                 <path
                                     d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
                             </svg> Chat</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="shop.html"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                height="24" fill="currentColor" class="bi bi-basket2-fill me-2 mb-1" viewBox="0 0 16 16">
+                                height="24" fill="currentColor" class="bi bi-basket2-fill me-2 mb-1"
+                                viewBox="0 0 16 16">
                                 <path
                                     d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1" />
                             </svg> Shopping list</a>
@@ -57,7 +58,8 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="profile.html"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                height="24" fill="currentColor" class="bi bi-person-circle me-2 mb-1" viewBox="0 0 16 16">
+                                height="24" fill="currentColor" class="bi bi-person-circle me-2 mb-1"
+                                viewBox="0 0 16 16">
                                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
                                 <path fill-rule="evenodd"
                                     d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
@@ -70,36 +72,215 @@
         <div class="start">
             <div class="title">
                 <h1>SHOPPING LIST</h1>
-                <button class="add">
+                <button class="add" id="showForm">
                     <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px"
                         fill="#D689FF">
                         <path
                             d="M440-440v120q0 17 11.5 28.5T480-280q17 0 28.5-11.5T520-320v-120h120q17 0 28.5-11.5T680-480q0-17-11.5-28.5T640-520H520v-120q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640v120H320q-17 0-28.5 11.5T280-480q0 17 11.5 28.5T320-440h120Zm40 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z" />
                     </svg>
                 </button>
+
+                <div id="taskForm" class="task">
+                    <button id="cancelBtn" class="cancelBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path
+                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                        </svg></button>
+                    <div class="form pt-5 flex-column d-flex gap-3">
+                        <div class="name">
+                            <input id="taskName" placeholder="Enter task">
+                        </div>
+                        <div class="note d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-journal-text me-3" viewBox="0 0 16 16">
+                                <path
+                                    d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
+                                <path
+                                    d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2" />
+                                <path
+                                    d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z" />
+                            </svg>
+                            <input id="taskNote" placeholder="Enter note...">
+                        </div>
+                        <div class="tag">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-tags me-2" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 2v4.586l7 7L14.586 9l-7-7zM2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586z" />
+                                <path
+                                    d="M5.5 5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m0 1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M1 7.086a1 1 0 0 0 .293.707L8.75 15.25l-.043.043a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 0 7.586V3a1 1 0 0 1 1-1z" />
+                            </svg>
+                            <select id="taskCat">
+                                <option value="">Select category</option>
+                                <option value="meat/fish">meat/fish</option>
+                                <option value="toilety">toilety</option>
+                                <option value="vegetable">vegetable</option>
+                                <option value="condiments">condiments</option>
+                                <option value="snacks">snacks</option>
+                                <option value="drinks">drinks</option>
+                                <option value="baking">baking</option>
+                                <option value="frozen">frozen</option>
+                                <option value="pastry">pastry</option>
+                                <option value="selfcare">selfcare</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <button id="addTaskBtn">Přidat</button>
+
+
+                </div>
             </div>
-            <div class="category text-center pt-5">
-                <h3>category:</h3>
+            <div class="category pt-5">
+                <h3 class="text-center">category:</h3>
+                <div id="filterBtns" class="d-flex gap-4 filter">
+                    <div class="flex-column">
+                        <button class="btn p-1 " data-cat="all"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 48 48">
+                                <mask id="ipSAllApplication0">
+                                    <path fill="currentColor" stroke="#fff" stroke-linejoin="round" stroke-width="4"
+                                        d="M18 6H8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2Zm0 22H8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V30a2 2 0 0 0-2-2ZM40 6H30a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2Zm0 22H30a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V30a2 2 0 0 0-2-2Z" />
+                                </mask>
+                                <path fill="currentColor" d="M0 0h48v48H0z" mask="url(#ipSAllApplication0)" />
+                            </svg>All</button>
+                    </div>
+                    <div class="flex-column">
+                        <button class="btn " data-cat="meat/fish"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                                height="32" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="m5.44 7.96l.52-.53c.58-.58 1.54-.58 2.14.04l.02.03c.49.5 1.14.74 1.85.81c.97.09 1.91.61 2.53 1.55c.68 1.08.67 2.52-.04 3.59a3.322 3.322 0 0 1-5.18.55c-.56-.55-.88-1.26-.96-2c-.08-.73-.37-1.42-.88-1.93c-.58-.57-.58-1.53 0-2.11M9.64 16c-1.17 0-2.26-.45-3.07-1.28c-.7-.72-1.14-1.62-1.25-2.6c-.03-.3-.12-.69-.36-1.05C4.36 11.9 4 12.9 4 14c0 1.64.8 3.09 2.03 4H19v-1c0-3.6-2.39-6.65-5.66-7.65c.89 1.4.87 3.27-.04 4.65c-.8 1.25-2.18 2-3.66 2m5.14-8.44h1.27c.87 0 1.63.61 1.63 1.7V10h1.25V9c0-1.5-1.33-2.64-2.88-2.64h-1.27c-.83 0-1.54-.82-1.54-1.66s.71-1.46 1.54-1.46V2C13.24 2 12 3.24 12 4.78s1.24 2.78 2.78 2.78M4.5 7.55c.06-.1.14-.2.23-.3l.52-.52c.09-.09.19-.16.29-.23L4.13 5.07c.14-.27.09-.62-.13-.85a.767.767 0 0 0-1.07 0c-.14.14-.21.31-.22.49c-.18.01-.35.08-.49.22c-.29.29-.29.77 0 1.07c.23.22.57.27.85.13L4.5 7.55m13.89-3.16c.51-.51.83-1.2.83-1.97h-1.25c0 .83-.7 1.53-1.53 1.53v1.24c1.86 0 3.32 1.52 3.32 3.38V11H21V8.57a4.61 4.61 0 0 0-2.61-4.18M5 21h14c1.11 0 2-.89 2-2H3a2 2 0 0 0 2 2Z" />
+                            </svg>meat/fish</button>
+                    </div>
+                    <div class="flex-column">
+                        <button class="btn " data-cat="toilety"><svg xmlns="http://www.w3.org/2000/svg" height="32px"
+                                viewBox="0 -960 960 960" width="32px" fill="currentColor">
+                                <path
+                                    d="M120-440h160v-40h-80q-17 0-28.5-11.5T160-520q0-17 11.5-28.5T200-560h80q33 0 56.5 23.5T360-480v40h80v-276q0-69 48-116.5T605-880q46 0 85 24t60 66l28 56q8 15 2.5 30.5T760-680q-15 8-30.5 2.5T706-698l-28-56q-11-21-31-33.5T604-800q-35 0-59.5 24.5T520-716v276h80v-40q0-33 23.5-56.5T680-560h80q17 0 28.5 11.5T800-520q0 17-11.5 28.5T760-480h-80v40h160q17 0 28.5 11.5T880-400q0 17-11.5 28.5T840-360H120q-17 0-28.5-11.5T80-400q0-17 11.5-28.5T120-440Zm120 320q-33 0-56.5-23.5T160-200v-120h640v120q0 33-23.5 56.5T720-120H240Z" />
+                            </svg>
+
+                            toilety</button>
+                    </div>
+                    <div class="flex-column">
+                        <button class="btn " data-cat="vegetable"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                                height="32" viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                    d="M346.7 6C337.6 17 320 42.3 320 72c0 40 15.3 55.3 40 80s40 40 80 40c29.7 0 55-17.6 66-26.7c4-3.3 6-8.2 6-13.3s-2-10-6-13.2c-11.4-9.1-38.3-26.8-74-26.8c-32 0-40 8-40 8s8-8 8-40c0-35.7-17.7-62.6-26.8-74c-3.2-4-8.1-6-13.2-6s-10 2-13.3 6zM244.6 136c-40 0-77.1 18.1-101.7 48.2l60.5 60.5c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0L125.5 212v.1L2.2 477.9C-2 487-.1 497.8 7 505s17.9 9 27.1 4.8l134.7-62.4l-52.1-52.1c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l60.4 60.3l100.2-46.4c46.4-21.5 76.2-68 76.2-119.2C376 194.8 317.2 136 244.6 136z" />
+                            </svg>vegetable</button>
+                    </div>
+                    <div class="flex-column">
+                        <button class="btn " data-cat="condiments"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                                height="32" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M13.9 7.5c0-.7.2-1.2.3-1.5h.6l.9-2.5h.8V2h-9v1.5h.8L9.2 6h.6c.2.3.3.8.3 1.5c0 1.3-4.1 6.2-4.1 10.1v2c0 1.4 2.7 2.3 6 2.3s6-.9 6-2.3v-2c0-3.9-4.1-8.8-4.1-10.1M12 15a2 2 0 0 1-2-2a2 2 0 0 1 2-2a2 2 0 0 1 2 2a2 2 0 0 1-2 2Z" />
+                            </svg>acondiments</button>
+                    </div>
+                    <div class="flex-column">
+                        <button class="btn " data-cat="snacks"><svg xmlns="http://www.w3.org/2000/svg" height="32px"
+                                viewBox="0 -960 960 960" width="32px" fill="currentColor">
+                                <path
+                                    d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-81 33.5-157.5t93-134.5Q266-830 348-860t180-18q15 2 23 12.5t9 28.5q2 64 47.5 109.5T716-680q21 1 32 12t12 34q2 42 25.5 69t65.5 41q14 5 21.5 14.5T880-486q2 83-29 157t-85 129.5Q712-144 638-112T480-80Zm-60-480q25 0 42.5-17.5T480-620q0-25-17.5-42.5T420-680q-25 0-42.5 17.5T360-620q0 25 17.5 42.5T420-560Zm-80 200q25 0 42.5-17.5T400-420q0-25-17.5-42.5T340-480q-25 0-42.5 17.5T280-420q0 25 17.5 42.5T340-360Zm260 40q17 0 28.5-11.5T640-360q0-17-11.5-28.5T600-400q-17 0-28.5 11.5T560-360q0 17 11.5 28.5T600-320Z" />
+                            </svg>snacks</button>
+                    </div>
+
+                    <div class="flex-column">
+                        <button class="btn " data-cat="frozen"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                                height="32" viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                    d="m461 349l-34-19.64a89.53 89.53 0 0 1 20.94-16a22 22 0 0 0-21.28-38.51a133.62 133.62 0 0 0-38.55 32.1L300 256l88.09-50.86a133.46 133.46 0 0 0 38.55 32.1a22 22 0 1 0 21.28-38.51a89.74 89.74 0 0 1-20.94-16l34-19.64A22 22 0 1 0 439 125l-34 19.63a89.74 89.74 0 0 1-3.42-26.15A22 22 0 0 0 380 96h-.41a22 22 0 0 0-22 21.59a133.61 133.61 0 0 0 8.5 49.41L278 217.89V116.18a133.5 133.5 0 0 0 47.07-17.33a22 22 0 0 0-22.71-37.69A89.56 89.56 0 0 1 278 71.27V38a22 22 0 0 0-44 0v33.27a89.56 89.56 0 0 1-24.36-10.11a22 22 0 1 0-22.71 37.69A133.5 133.5 0 0 0 234 116.18v101.71L145.91 167a133.61 133.61 0 0 0 8.52-49.43a22 22 0 0 0-22-21.59H132a22 22 0 0 0-21.59 22.41a89.74 89.74 0 0 1-3.41 26.19L73 125a22 22 0 1 0-22 38.1l34 19.64a89.74 89.74 0 0 1-20.94 16a22 22 0 1 0 21.28 38.51a133.62 133.62 0 0 0 38.55-32.1L212 256l-88.09 50.86a133.62 133.62 0 0 0-38.55-32.1a22 22 0 1 0-21.28 38.51a89.74 89.74 0 0 1 20.94 16L51 349a22 22 0 1 0 22 38.1l34-19.63a89.74 89.74 0 0 1 3.42 26.15A22 22 0 0 0 132 416h.41a22 22 0 0 0 22-21.59a133.61 133.61 0 0 0-8.5-49.41L234 294.11v101.71a133.5 133.5 0 0 0-47.07 17.33a22 22 0 1 0 22.71 37.69A89.56 89.56 0 0 1 234 440.73V474a22 22 0 0 0 44 0v-33.27a89.56 89.56 0 0 1 24.36 10.11a22 22 0 0 0 22.71-37.69A133.5 133.5 0 0 0 278 395.82V294.11L366.09 345a133.61 133.61 0 0 0-8.52 49.43a22 22 0 0 0 22 21.59h.43a22 22 0 0 0 21.59-22.41a89.74 89.74 0 0 1 3.41-26.19l34 19.63A22 22 0 1 0 461 349Z" />
+                            </svg>frozen</button>
+                    </div>
+                    <div class="flex-column">
+                        <button class="btn " data-cat="pastry"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                                height="32" viewBox="0 0 48 48">
+                                <mask id="ipSBread0">
+                                    <g fill="none" stroke-linecap="round" stroke-width="4">
+                                        <path fill="currentColor" stroke="#fff" stroke-linejoin="round"
+                                            d="M4 32.083c0-1.202.266-2.395.971-3.368C7.045 25.85 12.671 20 24 20c11.33 0 16.955 5.851 19.029 8.715c.705.973.971 2.166.971 3.368A7.917 7.917 0 0 1 36.083 40H11.917A7.917 7.917 0 0 1 4 32.083Z" />
+                                        <path stroke="#fff" d="M12 9v4" />
+                                        <path stroke="#000" d="M14 22v4" />
+                                        <path stroke="#fff" d="M36 9v4" />
+                                        <path stroke="#000" d="M34 22v4" />
+                                        <path stroke="#fff" d="M24 7v6" />
+                                        <path stroke="#000" d="M24 20v8" />
+                                        <path stroke="#fff"
+                                            d="M40 25.443C36.906 22.78 31.808 20 24 20s-12.906 2.779-16 5.443" />
+                                    </g>
+                                </mask>
+                                <path fill="currentColor" d="M0 0h48v48H0z" mask="url(#ipSBread0)" />
+                            </svg>pastry</button>
+                    </div>
+                    <div class="flex-column">
+                        <button class="btn " data-cat="selfcare"><svg xmlns="http://www.w3.org/2000/svg" height="32px"
+                                viewBox="0 -960 960 960" width="32px" fill="currentColor">
+                                <path
+                                    d="M640-40q-17 0-28.5-11.5T600-80q0-17 11.5-28.5T640-120h120v-40H640q-17 0-28.5-11.5T600-200q0-17 11.5-28.5T640-240h120v-40H640q-17 0-28.5-11.5T600-320q0-17 11.5-28.5T640-360h120v-40H640q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480h120v-40H640q-17 0-28.5-11.5T600-560q0-17 11.5-28.5T640-600h120v-40H640q-17 0-28.5-11.5T600-680q0-17 11.5-28.5T640-720h160q33 0 56.5 23.5T880-640v520q0 33-23.5 56.5T800-40H640ZM320-360q66 0 113-65t47-155q0-90-47-155t-113-65q-66 0-113 65t-47 155q0 90 47 155t113 65Zm0 320q-48 0-79-35.5T217-159l16-141q-68-33-110.5-108.5T80-580q0-125 70-212.5T320-880q100 0 170 87.5T560-580q0 96-42.5 171.5T407-300l16 141q7 48-24 83.5T320-40Z" />
+                            </svg>selfcare</button>
+                    </div>
+                    <div class="flex-column">
+                        <button class="btn " data-cat="fruit"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                                height="32" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M5.471 3.42A5.181 5.181 0 0 0 6.89 7.301a5.12 5.12 0 0 0-3.66 4.216a10.46 10.46 0 0 0 1.37 6.797l.35.59a.757.757 0 0 0 .043.063l1.416 1.906a3.462 3.462 0 0 0 5.275.336a.437.437 0 0 1 .63 0a3.462 3.462 0 0 0 5.275-.336l1.416-1.907a.743.743 0 0 0 .042-.063l.351-.59a10.46 10.46 0 0 0 1.373-6.795a5.12 5.12 0 0 0-6.11-4.306l-1.901.394h-.003c.03-.78.152-1.62.391-2.338c.29-.868.692-1.39 1.14-1.576a.75.75 0 1 0-.578-1.385c-1.052.439-1.65 1.48-1.985 2.486l-.046.142a5.22 5.22 0 0 0-.943-1.29a5.181 5.181 0 0 0-3.98-1.51A1.367 1.367 0 0 0 5.47 3.418Zm2.926 7.815c-.347.069-.665.313-.864.778c-.203.474-.275 1.177-.056 2.054a.75.75 0 0 1-1.455.364c-.28-1.122-.227-2.17.132-3.009c.363-.847 1.045-1.478 1.949-1.658a.75.75 0 1 1 .294 1.47Z" />
+                            </svg>fruit</button>
+                    </div>
+                </div>
             </div>
-            
+
         </div>
 
-        
+
     </div>
     <script>
         const obsah = document.querySelector('.obsah');
-      
+
         function scale() {
-          const scaleX = window.innerWidth / 412;
-          const scaleY = window.innerHeight / 917;
-          const scale = Math.min(scaleX, scaleY, 1);
-          obsah.style.transform = `scale(${scale})`;
+            const scaleX = window.innerWidth / 412;
+            const scaleY = window.innerHeight / 917;
+            const scale = Math.min(scaleX, scaleY, 1);
+            obsah.style.transform = `scale(${scale})`;
         }
-      
+
         window.addEventListener('resize', scale);
         scale();
-      </script>
+    </script>
+    <script>
+        const form = document.getElementById('taskForm'),
+            todo = document.getElementById('todoTasks'),
+            done = document.getElementById('doneTasks');
+        let currentFilter = "all";
 
+        showForm.onclick = () => form.style.display = "block";
+        cancelBtn.onclick = () => form.style.display = "none";
+
+        addTaskBtn.onclick = () => {
+            let name = taskName.value.trim(),
+                cat = taskCat.value.trim();
+            if (!name || !cat) return alert("fill in the nam and category");
+            let box = document.createElement("div");
+            box.textContent = name + " [" + cat + "]";
+            box.dataset.group = cat;
+            box.onclick = () => {
+                (box.parentElement === done ? todo : done).appendChild(box);
+                applyFilter();
+            };
+            todo.appendChild(box);
+            form.style.display = "none";
+            taskName.value = taskCat.value = "";
+            applyFilter();
+        };
+
+        document.querySelectorAll("#filterBtns .btn").forEach(b => {
+            b.onclick = () => { currentFilter = b.dataset.cat; applyFilter(); };
+        });
+
+        function applyFilter() {
+            [todo, done].forEach(list => {
+                [...list.children].forEach(box => {
+                    box.style.display = (currentFilter === "all" || box.dataset.group === currentFilter) ? "" : "none";
+                });
+            });
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

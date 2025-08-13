@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>Shopping List</title>
+<style>
+  .task { display:none; }
+  .btn { margin:2px; padding:5px; cursor:pointer; border:1px solid #000; }
+</style>
+</head>
+<body>
+
+<h3>SHOPPING LIST</h3>
+<button id="showForm">+ Přidat</button>
+
+<div id="taskForm" class="task">
+  <input id="taskName" placeholder="Název">
+  <select id="taskCat">
+    <option value="">Kategorie</option>
+    <option value="meat/fish">meat/fish</option>
+    <option value="toilety">toilety</option>
+  </select>
+  <button id="addTaskBtn">Přidat</button>
+  <button id="cancelBtn">Zrušit</button>
+</div>
+
+<!-- Filtr -->
+<div id="filterBtns">
+  <button class="btn" data-cat="all">Vše</button>
+  <button class="btn" data-cat="meat/fish">meat/fish</button>
+  <button class="btn" data-cat="toilety">toilety</button>
+</div>
+
+<h4>Úkoly</h4>
+<div id="todoTasks"></div>
+
+<h4>Hotové úkoly</h4>
+<div id="doneTasks"></div>
+
+<script>
+const form=document.getElementById('taskForm'),
+      todo=document.getElementById('todoTasks'),
+      done=document.getElementById('doneTasks');
+let currentFilter="all";
+
+showForm.onclick=()=>form.style.display="block";
+cancelBtn.onclick=()=>form.style.display="none";
+
+addTaskBtn.onclick=()=>{
+  let name=taskName.value.trim(),
+      cat=taskCat.value.trim();
+  if(!name||!cat) return alert("Vyplň název i kategorii");
+  let box=document.createElement("div");
+  box.textContent=name+" ["+cat+"]";
+  box.dataset.group=cat;
+  box.onclick=()=>{
+    (box.parentElement===done?todo:done).appendChild(box);
+    applyFilter();
+  };
+  todo.appendChild(box);
+  form.style.display="none";
+  taskName.value=taskCat.value="";
+  applyFilter();
+};
+
+document.querySelectorAll("#filterBtns .btn").forEach(b=>{
+  b.onclick=()=>{ currentFilter=b.dataset.cat; applyFilter(); };
+});
+
+function applyFilter(){
+  [todo,done].forEach(list=>{
+    [...list.children].forEach(box=>{
+      box.style.display=(currentFilter==="all"||box.dataset.group===currentFilter)?"":"none";
+    });
+  });
+}
+</script>
+</body>
+</html>
