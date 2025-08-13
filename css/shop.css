@@ -227,3 +227,41 @@ h1 {
  
   max-width: 100%;
 }
+
+h3 {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    letter-spacing: 1px !important;
+    color: white !important;
+    text-transform: uppercase;
+}
+.text p {
+    font-size: 14px;
+    padding-top: 3px;
+}
+
+  .box {
+    align-items: center;
+    background-color: #363636;
+    border-radius: 20px;
+    padding-inline: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .text h3, 
+  .text h3, .text p {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+  }
+
+  .completed svg, .doneContent svg {
+    fill: #D689FF !important;
+  }
+  
+  .completed h3 {
+    text-decoration: line-through;
+  }
+#taskTemplate {
+  display: none;
+}
